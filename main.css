@@ -1,0 +1,163 @@
+/* 全局清除padding和margin，设置默认字体family */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family:PingFangSC-Medium,PingFang SC;
+ 
+}
+body {
+    background-color: #FAFAFA;
+}
+/*header固定在顶部*/
+.header {
+    width:100%;
+    height:64px;
+    background: #ffffff;
+    box-shadow:0px 4px 8px 0px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+
+
+}
+/* 这里开始是hader左边的部分 */
+.header-left {
+    margin-left: 64px;
+    float: left;
+    margin-top: 16px;
+}
+/* 还是吧header的logo文本又命名了一部分，以后应该会放上图片 */
+.header-left .logo {
+    font-size:24px;
+    font-weight:500;
+    color:rgba(55,71,79,1);
+}
+/* 这里开始是header右边的部分 */
+.header-right {
+    margin-right: 64px;
+    margin-top: 18px;
+}
+/* menu的布局，menu的超链接样式 */
+.header-right .menu {
+    font-size:20px;
+    font-weight:500;
+    color:#B0BEC5;
+    line-height:28px;
+    list-style: none;
+    float: right;
+   
+}
+.menu li {
+    display: inline-block; /*想要横过来，针对li*/
+}
+.menu li:not(:last-child) {
+    margin-right: 16px;
+}
+.menu a {
+    color: #B0BEC5;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color:#607D8B;
+}
+/*当前tabs选中页样式*/
+.menu .nowpage a{
+    color: #607D8B;
+}
+.menu .nowpage {
+    border-bottom: 6px solid #607D8B;
+    padding-bottom: 12px;
+}
+/*下面开始container部分主要是页面主体*/
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 84px;
+    padding-right: 64px;
+    padding-left: 64px;
+}
+/* 这里是关于feed卡片的样式 */
+.feed {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.1);
+    border-radius:4px;
+    padding: 24px;
+    margin-top: 16px;
+    
+}
+.feed:hover {
+    background:rgba(255,255,255,0.8);
+    box-shadow:0px 4px 8px 1px rgba(0,0,0,0.1);
+}
+/* 这里把标题分为了左右合成的一个整体 
+分别左边右边浮动，为了方便给整体加下边距，所以还是合在一起整了个盒子*/
+.tittle {
+    font-size: 16px;
+    font-weight: 500px;
+    line-height:22px;
+    height: 22px;
+    /* border-bottom: 1px solid #eceff1;
+    padding-bottom: 16px; */
+    padding-bottom: 8px;
+}
+/* 这里是标题的样式，比较显眼 */
+.text-tittle {
+    float: left;
+    font-size:16px;
+    font-weight:500;
+    color:rgba(33,33,33,1);
+    line-height:22px;
+    text-align: left;
+}
+/* 弱化了时间 */
+.update-time {
+    float: right;
+    text-align: right;
+    font-weight:400;
+    color:rgba(189,189,189,1);
+
+}
+/* tags给了一个div主要是方便加一个下边距 */
+.tags {
+    margin-bottom: 24px;
+}
+/* tag的样式比较不明显，如果以后更新更多样式，
+采用class=“tag tag-stylename”的办法来区分 */
+.tag {
+    font-weight:200;
+    font-size:12px;
+    color:#B0BEC5;
+    line-height:17px;
+    height:20px;
+    background: #ECEFF1;
+    border-radius:2px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    margin-top: 4px;
+    /* display: inline-block; */
+}
+.tag:not(:first-child) {
+    margin-left: 8px;
+}
+/* tag的一些特殊样式 */
+.tag-hightlight {
+    background: #ffe3f6;
+    color: #f76593;
+}
+.content h1 {
+    font-weight:400;
+color:#212121;
+line-height:20px;
+font-size: 14px;
+}
+.content p {
+    color: #606266;
+    font-size: 14px;
+    font-weight: 200;
+}
+
