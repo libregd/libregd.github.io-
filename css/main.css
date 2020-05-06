@@ -46,6 +46,7 @@ body {
     float: right;
    
 }
+ 
 .menu li {
     display: inline-block; /*想要横过来，针对li*/
 }
@@ -60,6 +61,7 @@ body {
 .menu a:hover {
     color:#607D8B;
 }
+
 /*当前tabs选中页样式*/
 .menu .nowpage a{
     color: #607D8B;
@@ -68,6 +70,27 @@ body {
     border-bottom: 6px solid #607D8B;
     padding-bottom: 12px;
 }
+/*dropmenu*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.12);
+}
+
+.dropdown-content a {
+    color:#607D8B;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color:#ECEFF1;}
+
+.menu li:hover .dropdown-content {
+    display: block;
+}
+
 /*下面开始container部分主要是页面主体*/
 
 .container {
@@ -75,8 +98,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 84px;
-    padding-right: 64px;
-    padding-left: 64px;
+    padding-right: 32px;
+    padding-left: 32px;
 }
 /* 这里是关于feed卡片的样式 */
 .feed {
@@ -149,6 +172,9 @@ body {
     background: #ffe3f6;
     color: #f76593;
 }
+.content {
+    margin-left: 20px;
+}
 .content h1 {
     font-weight:400;
 color:#212121;
@@ -168,4 +194,9 @@ margin-bottom: 16px;
     margin-top: 12px;
     margin-bottom: 12px;
 }
+.content img {
+    width: 600px;
 
+    display: block;
+    margin: 12px auto;
+}
